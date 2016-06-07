@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+struct Mahasiswa{
+    string nama;
+    int NIM;
+    int notelp;
+    float nilaitugas;
+    float nilaiUTS;
+    float kuis;
+    float UAS;
+    int nilaiAkhir;
+}; Mahasiswa input;
+
+void setmahasiswa(){
+    cout<<"Nama             : ";
+    cin>>input.nama;
+    cout<<"NIM              : ";
+    cin>>input.NIM;
+    cout<<"No Telpon        : ";
+    cin>>input.notelp;
+    cout<<"Nilai Tugas      : ";
+    cin>>input.nilaitugas;
+    cout<<"Nilai Kuis       : ";
+    cin>>input.kuis;
+    cout<<"Nilai UTS        : ";
+    cin>>input.nilaiUTS;
+    cout<<"Nilai UaS        : ";
+    cin>>input.UAS;
+    
+    void hasil(){
+        float hasil;
+        hasil=0.30* input.nilaitugas + 0.25*input.nilaiUTS + 0.25 * input.UAS + 0.20 * input.kuis;
+        cout<< "Nilai Akhir     : "<<hasil;
+    }
+    
+void showinfomahasiswa(){
+        cout<<"------------------------"<<endl;
+        cout<<"    INFO MAHASISWA      "<<endl;
+        cout<<"------------------------"<<endl;
+        cout<<"Nama            : "<<input.nama<<endl;
+        cout<<"NIM             : "<<input.NIM<<endl;
+        cout<<"No Telpon       : "<<input.notelp<<endl;
+        cout<<"Nilai Akhir     : "<<hasil<<endl;
+        cout<<"
+    }
+
+int main()
+{
+
+    setmahasiswa();
+    showinfomahasiswa();
+
+    return 0;
+}
